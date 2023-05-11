@@ -3,7 +3,7 @@
 //конфигурационный файла для открытия google их первого занятия
 //Gradle — система автоматической сборки, которую используют для упрощения работы с Java.
 // синтаксис груви
-
+// junit фреймворк для написания тестов
 plugins {
     id 'java-library'
 }
@@ -14,11 +14,12 @@ repositories {
 
 dependencies { // зависимости, подключение библиотек
     testImplementation (
-            "com.codeborne:selenide:5.25.0", // подключение selenide
-            "org.junit.jupiter:junit-jupiter-api:5.8.0") // подключение junit
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.8.0" // подключение junit
+            "com.codeborne:selenide:6.14.0", // подключение selenide
+            "org.junit.jupiter:junit-jupiter:5.8.0") // подключение junit, САМО ЯДРО
+    testRuntimeOnly ("org.slf4j:slf4j-simple:1.7.29", // логирование
+            "org.junit.jupiter:junit-jupiter-engine:5.8.0") // подключение junit, что бы в любой среде запускалось и работало ОДИНАКОВО
 }
 
-test {
-    useJUnitPlatform()
+test { // на какой системе будем запускать тесты
+    useJUnitPlatform() // поиск 5-й JUnit
 }
