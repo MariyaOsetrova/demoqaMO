@@ -12,14 +12,13 @@ repositories {
     mavenCentral()
 }
 
-dependencies { // зависимости, подключение библиотек
-    testImplementation (
-            "com.codeborne:selenide:6.14.0", // подключение selenide
-            "org.junit.jupiter:junit-jupiter:5.8.0") // подключение junit, САМО ЯДРО
-    testRuntimeOnly ("org.slf4j:slf4j-simple:1.7.29", // логирование
-            "org.junit.jupiter:junit-jupiter-engine:5.8.0") // подключение junit, что бы в любой среде запускалось и работало ОДИНАКОВО
+dependencies {
+    testImplementation("com.codeborne:selenide:5.24.0",
+            "org.junit.jupiter:junit-jupiter:5.7.1")
+    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.29",
+            "org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
 
-test { // на какой системе будем запускать тесты
-    useJUnitPlatform() // поиск 5-й JUnit
+test {
+    useJUnitPlatform()
 }
