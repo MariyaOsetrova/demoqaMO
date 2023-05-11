@@ -49,12 +49,12 @@ none*/
         open("https://demoqa.com/text-box");
         $("#userName").setValue("ВвелаИмя"); // ввели в поле имя
         $("#userEmail").setValue("mail@mail.ru"); // ввели почту
-        $("#currentAddress").setValue("Адрес1");// ввели адрес1
+        $("input#currentAddress").setValue("Адрес1");// ввели адрес1
         $("#permanentAddress").setValue("Адрес2");// ввели адрес2
         $("#submit").click();
         $("#output #name").shouldHave(text("ВвелаИмя"));
         $("#output #email").shouldHave(text("mail@mail.ru"));
-        $("#output #currentAddress").shouldHave(text("Адрес1"));
+        $("#output p#currentAddress").shouldHave(text("Адрес1"));
         $("#output #permanentAddress").shouldHave(text(permanentAddress)); // пример как через переменную, String permanentAddress = "Адрес2";
 
     }
