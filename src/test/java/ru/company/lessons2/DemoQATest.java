@@ -1,4 +1,4 @@
-package ru.company.lessons1;
+package ru.company.lessons2;
 
 import org.junit.jupiter.api.*;
 

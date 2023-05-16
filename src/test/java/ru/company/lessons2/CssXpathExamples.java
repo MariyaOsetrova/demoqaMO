@@ -1,9 +1,4 @@
-package ru.company.lessons1;
-
-import org.openqa.selenium.By;
-
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.$x;
+package ru.company.lessons2;
 
 public class CssXpathExamples {
 /*
@@ -77,5 +72,13 @@ public class CssXpathExamples {
 
     }
 */
+
+    /*$$ (css-селектор)
+При работе с отдельным элементом в Selenide мы используем знак $, который возвращает нам один элемент.
+Для работы с несколькими элементами нам нужно использовать знак $$, чтобы вернуть коллекцию элементов. */
+//    $$(".repo-list").first().$("a").click();// поиск в листе первого элемента и внутри ищем элемент a -  выбор
+
+
+    // ПРОСМОТР ЛОКАТОРОВ СКРЫТЫХ элементов, навести на него и нажать F8 (Source - пауза )
 }
 
